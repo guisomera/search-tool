@@ -13,7 +13,7 @@ from os import listdir
 def filtrar_texto(caminho, filtro):
     resultados = []
     for x in listdir(caminho):
-        f = open(f'{caminho}/{x}', "r", encoding="utf-8", errors="replace")
+        f = open(f'{caminho}/{x}')
         a = f.read()
         if filtro.upper() in a:
             resultados.append(x)
