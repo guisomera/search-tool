@@ -29,7 +29,7 @@ def mostrar_texto_esqueda(texto):
     resultados.config(state="disabled")
 
 
-def buscar ():
+def buscar (event=None):
     estado["palavra busca"] = entry.get().strip()
     caminho = estado["loc pasta"]
     filtro = estado["palavra busca"]
@@ -106,6 +106,8 @@ instrucao_entry.grid(row=2)
 
 entry = tk.Entry(frame_controles, width= 25)
 entry.grid(row=3, pady= 5)
+
+entry.bind("<Return>", buscar)
 
 botao_buscar = tk.Button(frame_controles, text="Buscar", command=buscar)
 botao_buscar.grid(row= 4, pady=5)

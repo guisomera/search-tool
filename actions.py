@@ -20,3 +20,5 @@ def filtrar_texto(caminho, filtro):
         f.close()
 
     return resultados
+    
+
